@@ -144,7 +144,7 @@ This generated multiple SYN packets targeting different ports.
 Intrusion Detection using Snort
 Snort IDS was configured to monitor network traffic and detect suspicious activity.
 
-Custom rule used:
+### Custom rule used:
 
 alert tcp any any -> any any (msg:"Possible Port Scan Detected"; flags:S; sid:1000001; rev:1;)
 Snort was executed using:
@@ -162,13 +162,13 @@ Snort monitored traffic and processed TCP scan activity.
 
 ## Important Wireshark Filters
 
-Filter	Purpose
-tcp	Show TCP traffic
-dns	Show DNS packets
-http	Show HTTP traffic
-icmp	Show ICMP packets
-tcp.flags.syn == 1	Show SYN packets
-tcp.flags.syn == 1 && tcp.flags.ack == 0	Detect SYN scan
+- Filter	Purpose
+- tcp	Show TCP traffic
+- dns	Show DNS packets
+- http	Show HTTP traffic
+- icmp	Show ICMP packets
+- tcp.flags.syn == 1	Show SYN packets
+- tcp.flags.syn == 1 && tcp.flags.ack == 0	Detect SYN scan
 
 
 ## Skills Learned
